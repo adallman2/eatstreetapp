@@ -1,0 +1,19 @@
+{
+  "name": "eatstreet",
+  "version": "1.0.0",
+  "description": "Alex Dallman app project for eatstreet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adallman2/eatstreetapp.git"
+  },
+  "author": "Alex Dallman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adallman2/eatstreetapp/issues"
+  },
+  "homepage": "https://github.com/adallman2/eatstreetapp#readme"
+}
