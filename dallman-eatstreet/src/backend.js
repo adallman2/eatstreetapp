@@ -31,13 +31,8 @@ module.exports = {
         });
     },
 
-    isNumber : function(input) {
-        input = (input) ? input : window.event;
-        var charCode = (input.which) ? input.which : input.keyCode;
-        if ( (charCode > 31 && charCode < 48) || charCode > 57) {
-            return false;
-        }
-        return true;
+    zipDistanceButton : function(zip1, zip2, opt1, opt2) {
+        console.log("made it " + zip1);
     }
 }
 
