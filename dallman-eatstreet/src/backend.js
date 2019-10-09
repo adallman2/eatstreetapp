@@ -29,6 +29,15 @@ module.exports = {
 
         console.log(JSON.parse(body));
         });
+    },
+
+    isNumber : function(input) {
+        input = (input) ? input : window.event;
+        var charCode = (input.which) ? input.which : input.keyCode;
+        if ( (charCode > 31 && charCode < 48) || charCode > 57) {
+            return false;
+        }
+        return true;
     }
 }
 

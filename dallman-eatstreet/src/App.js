@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import ZipSearch from './components/ZipSearch.js'
-import ZipDistance from './components/ZipDistance'
+import ZipDistance from './components/ZipDistance.js'
+import ZipData from './components/ZipData.js';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
         </p>
         <ZipSearch></ZipSearch>
         <ZipDistance></ZipDistance>
+        <ZipData></ZipData>
 
       </div>
     );

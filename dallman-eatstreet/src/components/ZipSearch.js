@@ -14,10 +14,10 @@ class ZipSearch extends React.Component {
     render() {
         return (
             <form>
-            <div class = "row">
+            <div class = "row justify-content-md-center">
             <div class="col col-lg-2">
                 <div class="active-pink-3 active-pink-4 mb-4">
-                <input class="form-control" type="text" placeholder="Enter a Zip Code For Information" aria-label="Search"></input>
+                <input class="form-control" type="number" min="10000" max="99999" placeholder="Enter a Zip Code" aria-label="Search"></input>
             </div>
             </div>
             <div class="col-md-auto">
