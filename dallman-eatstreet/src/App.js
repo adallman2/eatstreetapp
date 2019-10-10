@@ -15,11 +15,13 @@ class App extends Component {
           <h2>Alex Dallman - Eat Street Application Project</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Enter a zip code below:
         </p>
         <ZipSearch></ZipSearch>
+        <p className="app-intro">
+          Enter two zip codes and a distance below:
+        </p>
         <ZipDistance></ZipDistance>
-        <ZipData></ZipData>
 
       </div>
     );

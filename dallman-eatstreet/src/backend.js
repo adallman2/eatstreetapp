@@ -1,20 +1,29 @@
 //  
 var request = require("request");
-var APIkey = 'CAmpQVyrXmV7zpBu1UKUlZnw9OQaNSqyodOMJL37KfsJcN2GgE7KR4nfF0b8beJm';
+var APIkey = 'js-Zq4qNoX3ubrZ5CasQX3e9iBXQhBFxoXpmDKSFOZc9AkVvKx5CG70HCaZFcKQBNes';
 
 module.exports = {
 
-    getZipInfo : function(zipcode) {
+    getZipInfo : async function(zipcode) {
 
-        var options = { method: 'GET',
-        url: 'http://www.zipcodeapi.com/rest/' + APIkey + '/info.json/' + zipcode + '/degrees',
+        var options = { 
+        headers : {
+
+        },
+        method: 'GET',
+        url: 'http://www.zipcodeapi.com/rest/' + APIkey + '/info.json/' + zipcode + '/degrees'
         };
 
-        request(options, function (error, response, body) {
-        if (error) throw new Error(error);
-
-        console.log(JSON.parse(body));
+        return new Promise((resolve, reject) => {
+            request(options, function (error, response, body) {
+                if (error) throw new Error(error);
+        
+                console.log(JSON.parse(body));
+                resolve(JSON.parse(body));
+                });
         });
+
+        
 
 
     },

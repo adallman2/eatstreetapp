@@ -15,13 +15,13 @@ class ZipData extends React.Component {
         return (
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">53018</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Delafield, WI</h6>
-                    <p class="card-text">Latitude: </p>
-                    <p class="card-text">Longitude: </p>
-                    <p class="card-text">Timezone: () Offset(UTC): </p>
-                    <p class="card-text">Other Names: </p>
-                    <p class="card-text">Area Codes: </p>
+                    <h5 class="card-title">{this.props.zipCode}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{this.props.city}, {this.props.st}</h6>
+                    <p class="card-text">Latitude: {this.props.lat}</p>
+                    <p class="card-text">Longitude: {this.props.long}</p>
+                    <p class="card-text">Timezone: {this.props.timezone}({this.props.timezoneAbbr}) Offset(UTC): {this.props.offset}</p>
+                    <p class="card-text">Other Names: {this.props.oNames != null ? this.props.oNames : "none"}</p>
+                    <p class="card-text">Area Codes: {this.props.areaCodes}</p>
                 </div>
             </div>
         )
