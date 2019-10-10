@@ -28,6 +28,8 @@ class ZipSearch extends React.Component {
             timezone: "",
             timezoneAbbr: "",
             offset: 0,
+            oNames: "",
+            areaCodes: "",
             start: true,
             valid : false
         }

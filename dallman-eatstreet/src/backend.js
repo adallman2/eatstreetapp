@@ -28,7 +28,7 @@ module.exports = {
 
     },
 
-    zipCodesDistance : function(zip1, zip2, distance, unit) {
+    zipCodesDistance : async function(zip1, zip2, distance, unit) {
         var options = { method: 'GET',
         url: 'http://www.zipcodeapi.com/rest/' + APIkey + '/match-close.json/' + zip1 + ',' + zip2 + '/' + distance + '/' + unit,
         };
@@ -45,11 +45,11 @@ module.exports = {
         });
     },
 
-    zipDistanceButton : function(zip1, zip2, distance, mi, km) {
+     zipDistanceButton : async function(zip1, zip2, distance, mi, km) {
         if (mi == true) {
-            return this.zipCodesDistance(zip1, zip2, distance, "mile");
+            return await this.zipCodesDistance(zip1, zip2, distance, "mile");
         }
-        else return this.zipCodesDistance(zip1, zip2, distance, "km")
+        else return await this.zipCodesDistance(zip1, zip2, distance, "km")
     }
 }
 
