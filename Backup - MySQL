@@ -18,6 +18,9 @@ CREATE TABLE AreaCodes (
    city tinytext,
    state tinytext
    );
+   
  INSERT INTO ZipCodes (zipcode, lat, lng, city, state, timezone, timezoneAbbr, utc, dst) VALUES (53018, 43.048152, -88.390769, "Delafield", "WI", "America/Chicago", "CDT", -18000, 'T'), (53506, 43.164808, -90.286686, "Avoca", "WI", "America/Chicago", "CDT", -18000, 'T'), (10013, 40.720109, -74.004949, "New York", "NY", "America/New_York", "EDT", -14400, 'T');
- INSERT INTO AreaCodes (zipKey, areaCode) VALUES (10013, 212), (10013, 646), (10013, 917);
+ INSERT INTO AreaCodes (zipKey, areaCode) VALUES (10013, 212), (10013, 646), (10013, 917), (53018, 262), (53506, 608);
  INSERT INTO CityNames (zipKey, city, state) VALUES (10013, "Canal Street", "NY"), (10013, "Chinatown", "NY"), (10013, "Manhattan", "NY"), (10013, "Nyc", "NY");
+   
+ select * from ZipCodes left join AreaCodes on ZipCodes.zipcode = AreaCodes.zipKey left join CityNames on ZipCodes.zipcode = CityNames.zipKey
