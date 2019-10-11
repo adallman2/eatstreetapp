@@ -24,3 +24,5 @@ CREATE TABLE AreaCodes (
  INSERT INTO CityNames (zipKey, city, state) VALUES (10013, "Canal Street", "NY"), (10013, "Chinatown", "NY"), (10013, "Manhattan", "NY"), (10013, "Nyc", "NY");
    
  select * from ZipCodes left join AreaCodes on ZipCodes.zipcode = AreaCodes.zipKey left join CityNames on ZipCodes.zipcode = CityNames.zipKey
+
+ https://www.db-fiddle.com/f/84y9G2tQh2dWNApoyK4s3f/2
